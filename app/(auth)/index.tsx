@@ -18,6 +18,7 @@ const Index = () => {
   const [invalidEmail, setInvalidEmail] = useState(false);
   const [password, setPassword] = useState("");
   const onSubmit = () => {
+    console.log("Login?");
     const emailValid = new RegExp(
       /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
     ).test(email);
@@ -133,7 +134,7 @@ const Index = () => {
               fontSize: 20,
               alignSelf: "center",
             }}
-            onPress={onSubmit}
+            onPress={() => router.push("/(auth)/register")}
           >
             Registrarse
           </Text>
