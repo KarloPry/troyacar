@@ -30,17 +30,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="discover"
-        options={{
-          title: "Discover",
-          tabBarAccessibilityLabel: "Viajes",
-          tabBarShowLabel: false,
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? "car" : "car-outline"} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="search"
         options={{
           href: null,
@@ -49,6 +38,13 @@ export default function TabLayout() {
       />
       <Tabs.Screen
         name="history"
+        options={{
+          href: null,
+          tabBarShowLabel: false,
+        }} 
+      />
+      <Tabs.Screen
+        name="add"
         options={{
           href: null,
           tabBarShowLabel: false,

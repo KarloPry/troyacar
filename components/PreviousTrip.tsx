@@ -39,7 +39,7 @@ export default function PreviousTrip({
           borderRadius: 10,
         }}
       />
-      <Link href={{pathname:"/trip", params: {
+      <Link href={{pathname:"/history", params: {
         id : id
       }}} accessibilityLabel={"Viaje con " + name + " a las " + time}>
         <ThemedView>

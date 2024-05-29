@@ -93,7 +93,7 @@ export default function HomeScreen() {
             />
           </ThemedView>
         </Link>
-        <Link href={"(tabs)/add"} style={{ alignSelf: "center" }}>
+        <Link href={"/add"} style={{ alignSelf: "center" }}>
           <ThemedView
             style={{
               backgroundColor: "#6F92BF",

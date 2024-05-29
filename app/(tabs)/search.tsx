@@ -40,10 +40,7 @@ const Search = () => {
           <ThemedText style={{ textAlign: "left" }} type="title">
             Destino:
           </ThemedText>
-          <Picker
-            onValueChange={(itemValue: any) => setDestination(itemValue)}
-            selectedValue={destination}
-          >
+          <Picker onValueChange={(itemValue: any) => setDestination(itemValue)} selectedValue={destination}>
             <Picker.Item label="Centro Universitario" value="hercules" />
             <Picker.Item label="Facultad de informática" value="pueblito" />
           </Picker>
