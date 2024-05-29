@@ -19,6 +19,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
+          tabBarAccessibilityLabel: "Inicio",
           tabBarShowLabel: false,
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
@@ -32,6 +33,7 @@ export default function TabLayout() {
         name="discover"
         options={{
           title: "Discover",
+          tabBarAccessibilityLabel: "Viajes",
           tabBarShowLabel: false,
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? "car" : "car-outline"} color={color} />
@@ -39,9 +41,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="search"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
         name="profile"
         options={{
           title: "Profile",
+          tabBarAccessibilityLabel: "Perfil",
           tabBarShowLabel: false,
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon

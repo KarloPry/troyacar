@@ -105,6 +105,7 @@ const Index = () => {
           }}
         >
           <Text
+          accessibilityLabel="Botón de ingresar"
             style={{
               color: "white",
               textAlign: "center",
@@ -118,6 +119,7 @@ const Index = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+        accessibilityLabel="Botón de registrarse"
           style={{
             borderRadius: 10,
             borderColor: "#1A5FEF",
