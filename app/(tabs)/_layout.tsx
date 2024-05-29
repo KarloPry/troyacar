@@ -44,6 +44,21 @@ export default function TabLayout() {
         name="search"
         options={{
           href: null,
+          tabBarShowLabel: false,
+        }}
+      />
+      <Tabs.Screen
+        name="history"
+        options={{
+          href: null,
+          tabBarShowLabel: false,
+        }}
+      />
+      <Tabs.Screen
+        name="trip"
+        options={{
+          href: null,
+          tabBarShowLabel: false,
         }}
       />
       <Tabs.Screen

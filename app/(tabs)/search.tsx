@@ -17,6 +17,8 @@ import AvailableTrip from "@/components/TripsAvailable";
 import { Picker } from "@react-native-picker/picker";
 const Search = () => {
   const [payment, setPayment] = useState("");
+  const [destination, setDestination] = useState("");
+  const [selected, setSelected] = useState("");
   const DATA = [
     {
       name: "Lucia Sanchez",
@@ -38,10 +40,13 @@ const Search = () => {
           <ThemedText style={{ textAlign: "left" }} type="title">
             Destino:
           </ThemedText>
-          <TextInput
-            style={{ fontSize: 28 }}
-            placeholder="Seleccionar destino..."
-          />
+          <Picker
+            onValueChange={(itemValue: any) => setDestination(itemValue)}
+            selectedValue={destination}
+          >
+            <Picker.Item label="Centro Universitario" value="hercules" />
+            <Picker.Item label="Facultad de informática" value="pueblito" />
+          </Picker>
         </ThemedView>
         <ThemedView style={{ width: "100%", paddingHorizontal: 20 }}>
           <ThemedText style={{ textAlign: "left" }} type="subtitle">
@@ -58,6 +63,9 @@ const Search = () => {
               picture={
                 "https://raw.githubusercontent.com/KarloPry/troyacar/main/assets/images/trips/lucia.png"
               }
+              selected={selected}
+              setSelected={setSelected}
+              start="Hércules"
             />
             <AvailableTrip
               id="WWWWW"
@@ -67,6 +75,9 @@ const Search = () => {
               picture={
                 "https://raw.githubusercontent.com/KarloPry/troyacar/main/assets/images/trips/juan.png"
               }
+              selected={selected}
+              setSelected={setSelected}
+              start="El Pueblito"
             />
           </ScrollView>
         </ThemedView>
@@ -108,7 +119,9 @@ const Search = () => {
             borderRadius: 10,
           }}
         >
-          <ThemedText style={{ color: "white", fontSize: 20 }}>Agendar</ThemedText>
+          <ThemedText style={{ color: "white", fontSize: 20 }}>
+            Agendar
+          </ThemedText>
         </TouchableOpacity>
       </ThemedView>
     </ThemedView>
